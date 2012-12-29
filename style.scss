@@ -1,0 +1,93 @@
+@import 'compass';
+@import 'compass/reset';
+
+body {
+	font: normal normal 50pt sans-serif;
+}
+
+
+
+
+html, body {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	box-sizing: border-box;
+	background: #000;
+	color: #fff;
+}
+
+input {
+	font: inherit;
+	color: inherit;
+	background: inherit;
+	border: none;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+}
+
+#remove { width: 0.25em; }
+#level, #gear, #attack { width: 20%; }
+
+td, th {
+	vertical-align: middle;
+	text-align: center;
+}
+
+th {
+	font-size: 50%;
+	&.add{ text-align: left; }
+}
+
+button {
+	background: transparent;
+	font: inherit;
+	font-weight: bold;
+	color: inherit;
+	border: none;
+	color: rgba(#fff, 0.5);
+	margin: 0;
+	padding: 0.5em;
+}
+.delete {
+	font-size: 50%;
+	vertical-align: middle;
+}
+
+input[type=text] {
+	width: 100%;
+	font-size: 75%;
+}
+
+.spinner {
+	position: relative;
+	padding: 0 0.5em;
+	input { display: none }
+	button {
+		font-size: 75%;
+		position: absolute;
+		top: 0; bottom: 0;
+		width: 50%;
+		box-sizing: border-box;
+		padding: 0 0.1em;
+		margin: 0;
+	}
+	.up {
+		right: 0;
+		text-align: right;
+	}
+	.down {
+		left: 0;
+		text-align: left;
+	}
+}
