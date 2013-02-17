@@ -4,8 +4,8 @@ $.fn.spinner = ->
 	@each (idx, elem) ->
 		elem = $(elem)
 		value = $('<span>').text(elem.val())
-		up = $('<button>', {class: 'up'}).text('〉')
-		down = $('<button>', {class: 'down'}).text('〈')
+		up = $('<button>', {class: 'up'})
+		down = $('<button>', {class: 'down'})
 		elem.wrap($('<span>', {class: 'spinner'})).parent().append(value, up, down)
 		step = (up)-> (evt)->
 			evt.preventDefault()
