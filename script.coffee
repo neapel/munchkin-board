@@ -13,7 +13,7 @@ $.fn.spinner = ->
 			elem.change()
 		up.tap step(true)
 		down.tap step(false)
-		$(elem).change -> value.text(elem.val())
+		elem.change -> value.text(elem.val())
 
 $(document).ready ->
 	table = $('<table>').appendTo document.body
@@ -26,8 +26,10 @@ $(document).ready ->
 	thead = $('<thead>').appendTo table
 	tr = $('<tr>').appendTo thead
 	add_btn = $('<button>', {class: 'add'}).text('+')
+	reset_btn = $('<button>', {class: 'reset'}).text('↺')
 	tr.append(
-		$('<th>', {class: 'add', colspan: 2}).append(add_btn),
+		$('<th>', {class: 'add'}).append(add_btn),
+		$('<th>').append(reset_btn),
 		$('<th>').text('♥'), # level
 		$('<th>').text('⚒'), # gear
 		$('<th>').text('⚔')) # attack
@@ -37,8 +39,9 @@ $(document).ready ->
 
 	save = ->
 		data = data.filter (v) -> not v.deleted
-		window.localStorage?['munchkin'] = JSON.stringify data
-		console.log(JSON.stringify data)
+		data_k = for v in data
+			{name: v.name, gear: v.gear, level: v.level}
+		window.localStorage?['munchkin'] = JSON.stringify data_k
 
 	place_index = 1
 	addPlayer = (player)->
@@ -65,7 +68,7 @@ $(document).ready ->
 		root.append row
 		row.append(del_btn, name, level, gear, total)
 		row.children().wrap('<td>')
-		
+
 		update = ->
 			player.name = name.val()
 			player.level = +level.val()
@@ -83,10 +86,18 @@ $(document).ready ->
 			row.remove()
 			save()
 	
-	for v, i in data
-		addPlayer(v, i)
+	for v in data
+		addPlayer v
 
 	add_btn.tap (evt)->
 		evt.preventDefault()
 		i = data.push({name: null, level: 1, gear: 0}) - 1
-		addPlayer data[i], i
+		addPlayer data[i]
+
+	reset_btn.tap (evt)->
+		data = for v in data
+			{name: v.name, level: 1, gear: 0}
+		place_index = 1
+		$('tr:not(:first)').remove()
+		for v in data
+			addPlayer v
