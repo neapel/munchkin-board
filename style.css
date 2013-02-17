@@ -1,0 +1,186 @@
+/* line 17, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, style.scss */
+body {
+  font: normal normal 50pt sans-serif;
+}
+
+/* line 11, style.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 15, style.scss */
+body {
+  height: 100%;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+}
+
+/* line 22, style.scss */
+input {
+  font: inherit;
+  color: inherit;
+  background: inherit;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 34, style.scss */
+table {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 39, style.scss */
+#remove {
+  width: 0.25em;
+}
+
+/* line 40, style.scss */
+#level, #gear, #attack {
+  width: 20%;
+}
+
+/* line 42, style.scss */
+td, th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 47, style.scss */
+th {
+  font-size: 50%;
+}
+/* line 49, style.scss */
+th.add {
+  text-align: left;
+}
+
+/* line 53, style.scss */
+button {
+  background: transparent;
+  font: inherit;
+  font-weight: bold;
+  color: inherit;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  width: 2em;
+}
+
+/* line 66, style.scss */
+.delete {
+  font-size: 50%;
+  vertical-align: middle;
+}
+
+/* line 71, style.scss */
+input[type=text] {
+  width: 100%;
+  font-size: 75%;
+}
+
+/* line 76, style.scss */
+.spinner {
+  position: relative;
+  padding: 0 0.5em;
+}
+/* line 79, style.scss */
+.spinner input {
+  display: none;
+}
+/* line 80, style.scss */
+.spinner button {
+  font-size: 75%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 49%;
+  box-sizing: border-box;
+  padding: 0 0.1em;
+  margin: 0;
+}
+/* line 89, style.scss */
+.spinner .up {
+  right: 0;
+  text-align: right;
+  border-radius: 0 20px 20px 0;
+}
+/* line 94, style.scss */
+.spinner .down {
+  left: 0;
+  text-align: left;
+  border-radius: 20px 0 0 20px;
+}
